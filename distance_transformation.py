@@ -16,9 +16,9 @@ def distance(d_type):
         for j in range(3):
             result[i,j] = d_type([i,j],[1,1])
     return result
-# 이미지 업로드
+# import image
 img = cv2.imread(PATH, cv2.IMREAD_GRAYSCALE)
-# binary 이미지로 변환
+# to binary image
 _,img = cv2.threshold(img, 123, 255, cv2.THRESH_BINARY)
 dist_transformation = cv2.distanceTransform(img, cv2.DIST_L2, 3).astype(np.uint8)
 # My Transformation
@@ -33,9 +33,9 @@ br = np.array([[0,0,0],
                [0,0,1],
                [1,1,1]])
 
-# distance metric 설정
+# set distance metric 
 dm = euclidean_d
-# 이미지 padding
+# add padding
 transformed = cv2.copyMakeBorder(transformed, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=M*N)
 while(True):
     flag = False
@@ -57,7 +57,7 @@ while(True):
         break
 
 transformed = transformed[1:M+1,1:N+1].astype(np.uint8)
-# transformation 비교
+# transformation comparison 
 transformed = ((transformed / np.max(transformed)) * 255)
 dist_transformation = ((dist_transformation/np.max(dist_transformation))*255).astype(np.uint8)
 
