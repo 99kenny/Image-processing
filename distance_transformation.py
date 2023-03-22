@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+PATH = "distance_transformation.jpg"
 # distance metric
 def euclidean_d(a,b):
     return ((a[0]-b[0])**2 + (a[1] - b[1])**2)**0.5
@@ -16,7 +17,7 @@ def distance(d_type):
             result[i,j] = d_type([i,j],[1,1])
     return result
 # 이미지 업로드
-img = cv2.imread('C:/Users/99san/Workspace/computer_vision/distance_transformation.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread(PATH, cv2.IMREAD_GRAYSCALE)
 # binary 이미지로 변환
 _,img = cv2.threshold(img, 123, 255, cv2.THRESH_BINARY)
 dist_transformation = cv2.distanceTransform(img, cv2.DIST_L2, 3).astype(np.uint8)

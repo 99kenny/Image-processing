@@ -2,8 +2,9 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+PATH = "under_lena.png"
 # lena 이미지 grayscale로 임포트
-img = cv2.imread("C:/Users/99san/Workspace/computer_vision/kakao.", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("/PATH", cv2.IMREAD_GRAYSCALE)
 # 원본 이미지 확인jpg
 cv2.imshow('Original Image',img)
 # 원본 히스토그램 display
