@@ -3,12 +3,9 @@ Image Processing algorithms (histogram equalization, distance transformation)
 
 ## How to run
 1. download image and code
-  - git clone https://github.com/99kenny/Image-processing
-<br>
 2. edit PATH variable to your image PATH
-<br>
 3. Run python file
-<br>
+
 ## Histogram Equalization
 - Comparison Between using CV2 lib
   - Original image<br>
