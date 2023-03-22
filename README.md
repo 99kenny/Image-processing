@@ -3,7 +3,7 @@ Image Processing algorithms (histogram equalization, distance transformation)
 
 ## How to run
 1. download image and code
-  - git cloen https://github.com/99kenny/Image-processing
+  - git clone https://github.com/99kenny/Image-processing
 <br>
 2. edit PATH variable to your image PATH
 <br>
